@@ -150,7 +150,31 @@
     <Content Include="Content\image\button\upload_button.png" />
     <Content Include="Content\image\icon\Delete.gif" />
     <Content Include="Content\image\icon\download16.gif" />
+    <Content Include="CSS\bootstrap-theme.css" />
+    <Content Include="CSS\bootstrap-theme.min.css" />
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\demo.css" />
+    <Content Include="CSS\font-awesome.css" />
+    <Content Include="CSS\font-awesome.min.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\syntax.css" />
+    <Content Include="CSS\webuploader.css" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\cp_img_sc.png" />
+    <Content Include="Images\cp_img_tj.png" />
+    <Content Include="Images\cp_img_tj_a.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\icons.png" />
+    <Content Include="Images\image.png" />
+    <Content Include="Images\progress.png" />
+    <Content Include="Images\qrcode.jpg" />
+    <Content Include="Images\success.png" />
     <Content Include="Scripts\angular-controls\angular.webuploader.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
@@ -234,6 +258,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Md5.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Pic.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Images\logo.psd" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
