@@ -194,6 +194,7 @@
                         text = '上传失败';
                         break;
                 }
+                $info.attr('title',text);
                 $info.text(text).appendTo($li);
             };
             if (file.getStatus() === 'invalid') {
@@ -497,7 +498,16 @@
             updateTotalProgress();
         });
 
-
+        uploader.on('uploadAccept', function (obj,ret,cb) {
+           // debugger
+            var msg=ret.error;
+            if(msg && msg.code==-1){
+            $( '#'+obj.file.id ).find('p.error').text('上传出错,'+msg.message);
+            $( '#'+obj.file.id ).find('p.error').attr('title','上传出错,'+msg.message);
+            obj.file.ErrstatusText='上传出错,'+msg.message;
+                return false;
+            }
+        });
         uploader.on('beforeFileQueued', function (file) {
 
             if (multi != "true" && fileCount >= 1) {
