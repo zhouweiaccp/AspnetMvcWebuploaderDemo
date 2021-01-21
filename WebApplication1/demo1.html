@@ -502,8 +502,8 @@
            // debugger
             var msg=ret.error;
             if(msg && msg.code==-1){
-            $( '#'+obj.file.id ).find('p.error').text('上传出错,'+msg.message);
-            $( '#'+obj.file.id ).find('p.error').attr('title','上传出错,'+msg.message);
+          //  $( '#'+obj.file.id ).find('p.error').text('上传出错,'+msg.message);
+           // $( '#'+obj.file.id ).find('p.error').attr('title','上传出错,'+msg.message);
             obj.file.ErrstatusText='上传出错,'+msg.message;
                 return false;
             }

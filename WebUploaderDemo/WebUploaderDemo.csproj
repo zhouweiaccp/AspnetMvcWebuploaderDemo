@@ -178,6 +178,13 @@
     <Content Include="Scripts\angular-controls\angular.webuploader.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\dropzone\basic.css" />
+    <Content Include="Scripts\dropzone\basic.min.css" />
+    <Content Include="Scripts\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="Scripts\dropzone\dropzone.css" />
+    <Content Include="Scripts\dropzone\dropzone.js" />
+    <Content Include="Scripts\dropzone\dropzone.min.css" />
+    <Content Include="Scripts\dropzone\dropzone.min.js" />
     <Content Include="Scripts\i18n\angular-locale_zh-cn.js" />
     <Content Include="Scripts\JQuery\jquery-1.11.1.js" />
     <Content Include="Scripts\JQuery\jquery-1.11.1.min.js" />
@@ -271,6 +278,9 @@
     <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Images\logo.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\dropzone.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

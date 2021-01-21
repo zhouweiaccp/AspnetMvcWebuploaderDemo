@@ -20,6 +20,15 @@ namespace WebUploaderDemo.Controllers
         /// 多图片上传demo
         /// </summary>
         /// <returns></returns>
+        public ActionResult dropzone()
+        {
+
+            return View();
+        }
+        /// <summary>
+        /// 多图片上传demo
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Pic()
         {
             
