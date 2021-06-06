@@ -17,6 +17,53 @@ namespace WebUploaderDemo.Controllers
 
         }
         /// <summary>
+        /// 新版上传
+        /// git@github.com:filipeavsilva/http-multipart-parser.git
+        /// </summary>
+        /// <returns></returns>
+
+        [HttpPost]
+        public ActionResult UploadMulti()
+        {
+            HttpTools.Util.HTTPMultipartParser parser = new HttpTools.Util.HTTPMultipartParser(Request.InputStream, HttpTools.Util.EFileHandlingType.ALL_STREAMED);
+            var dir = Server.MapPath("~/Upload");//文件上传目录
+             if (!System.IO.Directory.Exists(dir))
+                System.IO.Directory.CreateDirectory(dir);
+            //Parse the data, iterating through the streamed files.
+            foreach (HttpTools.Util.StreamedFileData file in parser.Parse())
+            {
+                if (file.Name == "file_to_write")
+                { //We know we want to write this file
+                    file.ToFile(Path.Combine(dir, file.FileName));
+                }
+                else if (file.Name == "tiny_file")
+                { //OK, this one is tiny, we can keep it
+                    if (file.IsBinary)
+                    {
+                        byte[] bytes = (byte[])file.GetData();
+                    }
+                    else
+                    {
+                        string text = (string)file.GetData();
+                    }
+                }
+                else
+                { //We don't care about the others
+                    file.Discard(); //This is still needed to advance the stream
+                }
+            }
+            return Json(new { erron = 0 });//Demo，随便返回了个值，请勿参考
+        }
+        /// <summary>
+        /// 多图片上传demo
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult dropzone2()
+        {
+
+            return View();
+        }
+        /// <summary>
         /// 多图片上传demo
         /// </summary>
         /// <returns></returns>
@@ -70,7 +117,11 @@ namespace WebUploaderDemo.Controllers
             });
 
         }
-
+        public ActionResult test(string uploadhidden2)
+        {
+            ViewBag.uploadhidden2 = uploadhidden2;
+            return View();
+        }
         public ActionResult Index(string uploadhidden2)
         {
             ViewBag.uploadhidden2 = uploadhidden2;

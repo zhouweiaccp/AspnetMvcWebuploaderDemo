@@ -134,6 +134,13 @@
     <Compile Include="Areas\ajax\ajaxAreaRegistration.cs" />
     <Compile Include="Areas\ajax\Controllers\WebUploaderController.cs" />
     <Compile Include="Code\Document.cs" />
+    <Compile Include="Code\HttpMultipartParser\BinaryData.cs" />
+    <Compile Include="Code\HttpMultipartParser\ContentTypes.cs" />
+    <Compile Include="Code\HttpMultipartParser\EFileHandlingType.cs" />
+    <Compile Include="Code\HttpMultipartParser\MultipartData.cs" />
+    <Compile Include="Code\HttpMultipartParser\MultipartParser.cs" />
+    <Compile Include="Code\HttpMultipartParser\StreamedFileData.cs" />
+    <Compile Include="Code\HttpMultipartParser\TextData.cs" />
     <Compile Include="Code\WebUploaderHelper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,6 +205,7 @@
     <Content Include="Scripts\lib\require\i18n.js" />
     <Content Include="Scripts\lib\require\require.js" />
     <Content Include="Scripts\lib\require\text.js" />
+    <Content Include="Scripts\powerWebUploadtest.js" />
     <Content Include="Scripts\powerWebUpload.js" />
     <Content Include="Scripts\webuploader\Uploader.swf" />
     <Content Include="Scripts\webuploader\webuploader.css" />
@@ -281,6 +289,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\dropzone.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\dropzone2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Code\HttpMultipartParser\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\test.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

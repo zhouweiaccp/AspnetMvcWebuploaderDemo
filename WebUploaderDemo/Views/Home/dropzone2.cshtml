@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/JQuery/jquery-1.11.1.min.js"></script>
+    <link href="~/Scripts/dropzone/dropzone.css" rel="stylesheet" />
+    <script src="~/Scripts/dropzone/dropzone.js"></script>
+    <script>
+        var myDropzone = new Dropzone("div#myId", {
+            url: "/file/post"
+        });
+        $("div#myId").dropzone({
+            url: "/file/post"
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="myId" class="fallback dropzone">
+        <input name="file" type="file" multiple />
+    </div>
+</body>
+</html>
+

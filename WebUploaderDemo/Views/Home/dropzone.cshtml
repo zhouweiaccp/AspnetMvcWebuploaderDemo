@@ -38,6 +38,16 @@
     acceptedFiles: ".jpg,.jpeg,.doc,.docx,.ppt,.pptx,.txt,.avi,.pdf,.mp3,.zip",
     autoProcessQueue: false,
     paramName: "file",
+       //params: function (files, xhr) {
+       //    if (!files.length) {
+       //        return false;
+       //    }
+       //    var file = files[0];
+       //    return {
+       //        fileName: file.name,
+       //        fileType: file.type,
+       //    }
+       //},
     dictDefaultMessage: "拖入需要上传的文件",
     init: function () {
         var myDropzone = this, submitButton = document.querySelector("#qr"),
